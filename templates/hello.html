@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+{% if name %}
+Hello {{ name }}!
+{% endif %}
+<form method="POST">
+<code>CSRF: {{ form.csrf_token._value() }}</code>
+<br>
+{{ form.csrf_token }}
+{{ form.name }}
+<input type="submit" value="Submit">
+</form>
+<br>
+Errors: {{ form.errors }}
